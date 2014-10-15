@@ -1,8 +1,16 @@
 ﻿<Window x:Class="RTDDE.ModelViewer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:HelixToolkit="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf"        
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <HelixToolkit:HelixViewport3D Name="viewer" ShowCameraInfo="True" Orthographic="True" Background="Aqua">
+            <HelixToolkit:HelixViewport3D.DefaultCamera>
+                <OrthographicCamera LookDirection="0,0,-5" UpDirection="0,1,0" Position="0,0,5"></OrthographicCamera>
+            </HelixToolkit:HelixViewport3D.DefaultCamera>
+            <ModelVisual3D x:Name="model">
+                
+            </ModelVisual3D>
+        </HelixToolkit:HelixViewport3D>
     </Grid>
 </Window>
